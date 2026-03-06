@@ -1,2 +1,3 @@
-Com uma base sólida em **ética** e lealdade, busco aplicar e desenvolver minhas habilidades em programação **Python** para automação de *segurança* e análise de vulnerabilidades, visando proteger o ecossistema digital e mitigar riscos proativamente.
-Meu objetivo é apoiar as metas de segurança das organizações, utilizando minha comunicação eficaz e compromisso com o trabalho para contribuir para um ambiente digital seguro e confiável.
+Com uma base sólida em ética, responsabilidade e lealdade profissional, busco desenvolver e aplicar minhas habilidades em Python voltadas para automação de segurança, análise de vulnerabilidades e proteção de sistemas. Atualmente estou me especializando em cibersegurança através do Google Cybersecurity Professional Certificate.
+
+Tenho como objetivo contribuir para a proteção do ecossistema digital, identificando riscos, analisando ameaças e implementando práticas de segurança que ajudem organizações a fortalecer sua postura de segurança. Valorizo comunicação clara, aprendizado contínuo e comprometimento com boas práticas para ajudar a construir ambientes digitais seguros e confiáveis.
