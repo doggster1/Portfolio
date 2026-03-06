@@ -1,0 +1,2 @@
+Com uma base sólida em **ética e lealdade, busco aplicar e desenvolver minhas habilidades em programação **Python para automação de **segurança e análise de vulnerabilidades, visando proteger o ecossistema digital e mitigar riscos proativamente.
+Meu objetivo é apoiar as metas de segurança das organizações, utilizando minha comunicação eficaz e compromisso com o trabalho para contribuir para um ambiente digital seguro e confiável.
