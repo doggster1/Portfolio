@@ -1,0 +1,64 @@
+# 🛡️ Checklist de Controles e Conformidade - Botium Toys
+
+Este documento apresenta a avaliação atual dos controles de segurança e o status de conformidade da Botium Toys, baseado nos frameworks de cibersegurança e requisitos regulatórios.
+
+---
+
+## 🛠️ Avaliação de Controles
+
+**Pergunta:** A Botium Toys possui atualmente este controle implementado?
+
+| Status (Sim/Não) | Controle | Categoria |
+| [ ] | **Privilégio Mínimo** (Least Privilege) | Administrativo |
+| [ ] | **Planos de Recuperação de Desastres** (DRP) | Administrativo |
+| [ ] | **Políticas de Senha** | Administrativo |
+| [ ] | **Separação de Deveres** (Separation of duties) | Administrativo |
+| [ ] | **Firewall** | Técnico |
+| [ ] | **Sistema de Detecção de Intrusão (IDS)** | Técnico |
+| [ ] | **Backups** | Técnico |
+| [ ] | **Software Antivírus (AV)** | Técnico |
+| [ ] | **Monitoramento Manual de Sistemas Legados** | Técnico |
+| [ ] | **Criptografia** (Encryption) | Técnico |
+| [ ] | **Sistema de Gerenciamento de Senhas** | Técnico |
+| [ ] | **Fechaduras** (Escritórios, loja, armazém) | Físico |
+| [ ] | **Circuito Fechado de TV (CCTV)** | Físico |
+| [ ] | **Detecção/Prevenção de Incêndio** (Sprinklers) | Físico |
+
+---
+
+## ⚖️ Checklist de Conformidade (Compliance)
+
+**Pergunta:** A Botium Toys adere atualmente a esta melhor prática?
+
+### 💳 PCI DSS (Cartões de Pagamento)
+| Adere? | Melhor Prática |
+| [ ] | Apenas usuários autorizados acessam dados de cartão de crédito. |
+| [ ] | Dados de cartão são processados/transmitidos em ambiente seguro. |
+| [ ] | Procedimentos de criptografia em todos os pontos de contato. |
+| [ ] | Políticas de gerenciamento de senhas seguras adotadas. |
+
+### 🇪🇺 GDPR (Proteção de Dados - UE)
+| Adere? | Melhor Prática |
+| [ ] | Dados de clientes da U.E. são mantidos privados/seguros. |
+| [ ] | Plano de notificação de brecha em até 72 horas estabelecido. |
+| [ ] | Dados devidamente classificados e inventariados. |
+| [ ] | Políticas de privacidade documentadas e aplicadas. |
+
+### 📑 SOC (Tipo 1 e Tipo 2)
+| Adere? | Melhor Prática |
+| [ ] | Políticas de acesso de usuários estabelecidas. |
+| [ ] | Dados sensíveis (PII/SPII) são confidenciais/privados. |
+| [ ] | Integridade dos dados é validada e consistente. |
+| [ ] | Dados estão disponíveis para indivíduos autorizados. |
+
+---
+
+## 📝 Recomendações do Especialista
+
+> **Nota:** As recomendações abaixo visam mitigar riscos críticos e melhorar a postura de segurança.
+
+* **Prioridade 1:** Implementar criptografia de ponta a ponta para transações (PCI DSS).
+* **Prioridade 2:** Estabelecer um Plano de Resposta a Incidentes específico para a GDPR.
+* **Prioridade 3:** Automatizar o monitoramento de sistemas legados para reduzir falhas humanas.
+
+---
