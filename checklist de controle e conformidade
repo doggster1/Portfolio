@@ -11,13 +11,13 @@ Este documento apresenta a avaliação atual dos controles de segurança e o sta
 | Status (Sim/Não) | Controle | Categoria |
 | [N] | **Privilégio Mínimo** (Least Privilege) | Administrativo |
 | [N] | **Planos de Recuperação de Desastres** (DRP) | Administrativo |
-| [S] | **Políticas de Senha** | Administrativo |
+| [N] | **Políticas de Senha** | Administrativo |
 | [N] | **Separação de Deveres** (Separation of duties) | Administrativo |
 | [S] | **Firewall** | Técnico |
 | [N] | **Sistema de Detecção de Intrusão (IDS)** | Técnico |
 | [N] | **Backups** | Técnico |
 | [S] | **Software Antivírus (AV)** | Técnico |
-| [S] | **Monitoramento Manual de Sistemas Legados** | Técnico |
+| [N] | **Monitoramento Manual de Sistemas Legados** | Técnico |
 | [N] | **Criptografia** (Encryption) | Técnico |
 | [N] | **Sistema de Gerenciamento de Senhas** | Técnico |
 | [S] | **Fechaduras** (Escritórios, loja, armazém) | Físico |
@@ -49,7 +49,7 @@ Este documento apresenta a avaliação atual dos controles de segurança e o sta
 | [N] | Políticas de acesso de usuários estabelecidas. |
 | [N] | Dados sensíveis (PII/SPII) são confidenciais/privados. |
 | [S] | Integridade dos dados é validada e consistente. |
-| [S] | Dados estão disponíveis para indivíduos autorizados. |
+| [N] | Dados estão disponíveis para indivíduos autorizados. |
 
 ---
 
