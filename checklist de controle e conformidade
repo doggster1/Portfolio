@@ -9,20 +9,20 @@ Este documento apresenta a avaliação atual dos controles de segurança e o sta
 **Pergunta:** A Botium Toys possui atualmente este controle implementado?
 
 | Status (Sim/Não) | Controle | Categoria |
-| [ ] | **Privilégio Mínimo** (Least Privilege) | Administrativo |
-| [ ] | **Planos de Recuperação de Desastres** (DRP) | Administrativo |
-| [ ] | **Políticas de Senha** | Administrativo |
-| [ ] | **Separação de Deveres** (Separation of duties) | Administrativo |
-| [ ] | **Firewall** | Técnico |
-| [ ] | **Sistema de Detecção de Intrusão (IDS)** | Técnico |
-| [ ] | **Backups** | Técnico |
-| [ ] | **Software Antivírus (AV)** | Técnico |
-| [ ] | **Monitoramento Manual de Sistemas Legados** | Técnico |
-| [ ] | **Criptografia** (Encryption) | Técnico |
-| [ ] | **Sistema de Gerenciamento de Senhas** | Técnico |
-| [ ] | **Fechaduras** (Escritórios, loja, armazém) | Físico |
-| [ ] | **Circuito Fechado de TV (CCTV)** | Físico |
-| [ ] | **Detecção/Prevenção de Incêndio** (Sprinklers) | Físico |
+| [N] | **Privilégio Mínimo** (Least Privilege) | Administrativo |
+| [N] | **Planos de Recuperação de Desastres** (DRP) | Administrativo |
+| [N] | **Políticas de Senha** | Administrativo |
+| [N] | **Separação de Deveres** (Separation of duties) | Administrativo |
+| [S] | **Firewall** | Técnico |
+| [N] | **Sistema de Detecção de Intrusão (IDS)** | Técnico |
+| [N] | **Backups** | Técnico |
+| [S] | **Software Antivírus (AV)** | Técnico |
+| [N] | **Monitoramento Manual de Sistemas Legados** | Técnico |
+| [N] | **Criptografia** (Encryption) | Técnico |
+| [N] | **Sistema de Gerenciamento de Senhas** | Técnico |
+| [S] | **Fechaduras** (Escritórios, loja, armazém) | Físico |
+| [S] | **Circuito Fechado de TV (CCTV)** | Físico |
+| [S] | **Detecção/Prevenção de Incêndio** (Sprinklers) | Físico |
 
 ---
 
@@ -32,24 +32,24 @@ Este documento apresenta a avaliação atual dos controles de segurança e o sta
 
 ### 💳 PCI DSS (Cartões de Pagamento)
 | Adere? | Melhor Prática |
-| [ ] | Apenas usuários autorizados acessam dados de cartão de crédito. |
-| [ ] | Dados de cartão são processados/transmitidos em ambiente seguro. |
-| [ ] | Procedimentos de criptografia em todos os pontos de contato. |
-| [ ] | Políticas de gerenciamento de senhas seguras adotadas. |
+| [N] | Apenas usuários autorizados acessam dados de cartão de crédito. |
+| [N] | Dados de cartão são processados/transmitidos em ambiente seguro. |
+| [N] | Procedimentos de criptografia em todos os pontos de contato. |
+| [N] | Políticas de gerenciamento de senhas seguras adotadas. |
 
 ### 🇪🇺 GDPR (Proteção de Dados - UE)
 | Adere? | Melhor Prática |
-| [ ] | Dados de clientes da U.E. são mantidos privados/seguros. |
-| [ ] | Plano de notificação de brecha em até 72 horas estabelecido. |
-| [ ] | Dados devidamente classificados e inventariados. |
-| [ ] | Políticas de privacidade documentadas e aplicadas. |
+| [N] | Dados de clientes da U.E. são mantidos privados/seguros. |
+| [S] | Plano de notificação de brecha em até 72 horas estabelecido. |
+| [N] | Dados devidamente classificados e inventariados. |
+| [S] | Políticas de privacidade documentadas e aplicadas. |
 
 ### 📑 SOC (Tipo 1 e Tipo 2)
 | Adere? | Melhor Prática |
-| [ ] | Políticas de acesso de usuários estabelecidas. |
-| [ ] | Dados sensíveis (PII/SPII) são confidenciais/privados. |
-| [ ] | Integridade dos dados é validada e consistente. |
-| [ ] | Dados estão disponíveis para indivíduos autorizados. |
+| [N] | Políticas de acesso de usuários estabelecidas. |
+| [N] | Dados sensíveis (PII/SPII) são confidenciais/privados. |
+| [S] | Integridade dos dados é validada e consistente. |
+| [N] | Dados estão disponíveis para indivíduos autorizados. |
 
 ---
 
