@@ -2,7 +2,7 @@
 
 - [Fundamentos da Cibersegurança / Foundations of Cybersecurity – Google (Coursera)](https://coursera.org/share/6edbcc22a3c4b61454a82abab63d4f01)
 
-- Jogue com Segurança: Gerencie Riscos de Segurança / Play It Safe: Manage Security Risks – Google (Coursera)
+- [Jogue com Segurança: Gerencie Riscos de Segurança / Play It Safe: Manage Security Risks – Google (Coursera)](https://coursera.org/share/924bafbfd60f851e97293f1ff0641b80)
 
 - Conectar e Proteger: Redes e Segurança de Redes / Connect and Protect: Networks and Network Security – Google (Coursera)
 
