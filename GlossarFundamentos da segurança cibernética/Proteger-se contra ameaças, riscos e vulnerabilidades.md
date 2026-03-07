@@ -1,5 +1,5 @@
 # 📖 Glossário: Frameworks, Controles e Ética
-Módulo: Proteger-se contra ameaças, riscos e vulnerabilidades
+# Módulo: Proteger-se contra ameaças, riscos e vulnerabilidades
 Este repositório aborda os pilares da segurança da informação, com foco em conformidade legal, governança e a arquitetura necessária para proteger ativos organizacionais.
 
 ---
