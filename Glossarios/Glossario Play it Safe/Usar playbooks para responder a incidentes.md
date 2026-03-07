@@ -1,4 +1,4 @@
-# Glossário: Curso 2
+# Glossário: Play it safe: Manage Security Risks
 # Módulo:  Usar playbooks para responder a incidentes
 
 > **Aviso:** Termos e definições traduzidos automaticamente do inglês.
