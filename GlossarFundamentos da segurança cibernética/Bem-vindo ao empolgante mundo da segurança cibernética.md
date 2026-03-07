@@ -1,5 +1,5 @@
 # 📖 Glossário: Introdução à Segurança Cibernética 
-Módulo: Bem-vindo ao empolgante mundo da segurança cibernética
+# Módulo: Bem-vindo ao empolgante mundo da segurança cibernética
 
 Este repositório contém os conceitos fundamentais do **Curso 1, Módulo 1**, abordando as definições básicas de segurança, tipos de dados sensíveis e habilidades do profissional da área.
 
