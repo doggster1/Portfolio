@@ -1,4 +1,4 @@
-# 📖 Glossário:
+# 📖 Glossário: Play it safe: Manage Security Risks 
 # Módulo: Introdução às ferramentas de segurança cibernética.md
 
 > **Nota:** Termos e definições sobre SIEM, SOAR e Ferramentas de Análise.
