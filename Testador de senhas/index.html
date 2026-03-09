@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testador de Força de Senha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sua senha é segura?</h1>
+        <p>Digite uma senha abaixo para descobrir quanto tempo um hacker levaria para descobri-la.</p>
+
+        <input type="password" id="senha-input" placeholder="Digite sua senha aqui...">
+
+        <div class="barra-fundo">
+            <div id="barra-forca"></div>
+        </div>
+
+        <div id="feedback-container">
+            <p><strong>Tempo para quebrar:</strong> <span id="tempo-quebra">---</span></p>
+            <p><strong>Aviso:</strong> <span id="aviso">---</span></p>
+            <p><strong>Dica:</strong> <span id="sugestao">---</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
