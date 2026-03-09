@@ -1,3 +1,0 @@
-Com uma base sólida em ética, responsabilidade e lealdade profissional, busco desenvolver e aplicar minhas habilidades em Python voltadas para automação de segurança, análise de vulnerabilidades e proteção de sistemas. Atualmente estou me especializando em cibersegurança através do Google Cybersecurity Professional Certificate.
-
-Tenho como objetivo contribuir para a proteção do ecossistema digital, identificando riscos, analisando ameaças e implementando práticas de segurança que ajudem organizações a fortalecer sua postura de segurança. Valorizo comunicação clara, aprendizado contínuo e comprometimento com boas práticas para ajudar a construir ambientes digitais seguros e confiáveis.
