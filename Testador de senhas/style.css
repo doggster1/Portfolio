@@ -1,0 +1,91 @@
+/* Reset básico para manter tudo padronizado */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da tela e centralização */
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* A nossa caixa principal (cartão) */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilo do campo de digitar a senha */
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff; /* Fica azul quando clica */
+}
+
+/* --- BARRA DE FORÇA --- */
+.barra-fundo {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* A barrinha colorida que vai crescer (começa no tamanho zero) */
+#barra-forca {
+    height: 100%;
+    width: 0%; 
+    background-color: transparent;
+    /* A animação suave de crescer e mudar de cor */
+    transition: width 0.4s ease, background-color 0.4s ease; 
+}
+
+/* Caixa de feedback (tempo, dicas) */
+#feedback-container {
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    border-left: 4px solid #ccc; /* Detalhe visual na esquerda */
+}
+
+#feedback-container p {
+    margin: 8px 0;
+    color: #444;
+}
+
+#feedback-container strong {
+    color: #222;
+}
