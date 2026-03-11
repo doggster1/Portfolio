@@ -1,24 +1,48 @@
-# Relatório de Incidente de Cibersegurança: Análise de Tráfego de Rede
+# Cenário do Incidente: Indisponibilidade do Site e Erro de DNS
 
+## Visão Geral
+Você atua como analista de segurança cibernética em uma empresa provedora de serviços de TI. A situação teve início quando vários clientes relataram a incapacidade de acessar o site da empresa (`www.yummyrecipesforme.com`).
+
+* **Sintoma relatado:** Os usuários aguardam o carregamento da página e, em seguida, recebem o erro **"porta de destino inalcançável"** (*destination port unreachable*).
+* **Seu objetivo:** Analisar a situação e determinar qual protocolo de rede foi afetado durante o incidente.
+
+## Investigação Inicial e Solução de Problemas
+Para iniciar a investigação, você tenta reproduzir o problema acessando o site e confirma o recebimento do mesmo erro de porta inalcançável. A partir daí, a investigação técnica avança:
+
+1.  **Captura de Pacotes:** Você inicia a ferramenta de análise de rede **tcpdump** e tenta carregar a página da web novamente.
+2.  **Comportamento Esperado:** Normalmente, para carregar a página, o navegador envia uma consulta a um servidor DNS (via protocolo UDP) para descobrir o endereço IP associado ao nome de domínio. Em seguida, usa esse IP para enviar uma solicitação HTTPS ao servidor web.
+3.  **Descobertas do Analisador:** O `tcpdump` revela que, ao enviar os pacotes UDP para o servidor DNS, o seu computador recebe em troca pacotes ICMP contendo a seguinte mensagem de erro:
+    > **"porta udp 53 inacessível"** (*udp port 53 unreachable*)
+    > 
 ![Log do tcpdump](image_d49fd5.png)<img width="902" height="448" alt="log" src="https://github.com/user-attachments/assets/63cbff0f-e384-4536-b9fd-5eead4baf3e1" />
 
+## Análise dos Registros (Logs) do tcpdump
 
-## Parte 1: Resumo do problema
+Ao analisar o arquivo de registros gerado pelo `tcpdump`, foram identificadas as seguintes informações cruciais sobre o tráfego de rede:
 
-- **O protocolo UDP revela que:** O tráfego de saída do computador solicitando a resolução do nome de domínio `yummyrecipesforme.com` para o servidor DNS falhou, pois a consulta não pôde ser entregue com sucesso.
-- **Isto baseia-se nos resultados da análise de rede, que mostram que a resposta de eco ICMP devolveu a mensagem de erro:** "udp port 53 unreachable" (porta udp 53 inalcançável).
-- **A porta anotada na mensagem de erro é utilizada para:** Serviços DNS (Domain Name System), que são responsáveis por traduzir nomes de domínio de sites em endereços IP.
-- **O problema mais provável é:** O servidor DNS não está a executar o serviço de resolução de nomes no momento, o que significa que não há nenhum serviço a "escutar" a porta 53 para receber e processar as solicitações recebidas.
+### 1. Fluxo de Comunicação Inicial
+* **Solicitação de Saída (Linhas 1 e 2):** Mostram a consulta inicial do seu computador para o servidor DNS solicitando a resolução do endereço IP para `yummyrecipesforme.com`. Esta solicitação é encapsulada num **pacote UDP**.
+* **Resposta Recebida (Linhas 3 e 4):** Mostram a resposta ao pacote UDP inicial. A linha iniciada com `ICMP 203.0.113.2` representa o começo de uma mensagem de erro, indicando falha na entrega do pacote UDP na porta 53 do servidor DNS.
+
+### 2. Desconstrução dos Dados do Log
+* **Carimbos de Data/Hora (Timestamps):** Localizados no início de cada linha, indicam o momento exato do evento. Exemplo: `13:24:32.192571` (13 horas, 24 minutos e 32,192571 segundos).
+* **Endereçamento de Rede (IPs de Origem e Destino):**
+    * Na solicitação (ida): `192.51.100.15 > 203.0.113.2.domain`. O IP à esquerda do `>` é a origem (seu computador), e à direita é o destino (servidor DNS).
+    * Na resposta (volta/erro ICMP): A origem passa a ser o servidor DNS (`203.0.113.2`) e o destino é o seu computador (`192.51.100.15`).
+* **Detalhes e Sinalizadores (Flags):**
+    * `35084+`: Número de identificação da consulta. O sinal `+` indica a presença de sinalizadores associados à mensagem UDP.
+    * `A?`: Sinalizador que indica uma solicitação DNS para um "Registro A" (que mapeia um nome de domínio para um endereço IPv4).
+    * `ICMP`: Protocolo da mensagem de resposta, seguido imediatamente pela descrição do erro.
+
+### 3. Análise do Erro
+* **Mensagem Crítica:** A última linha menciona especificamente **"udp port 53 unreachable"** (porta udp 53 inacessível).
+* **Causa Raiz:** A porta 53 é o padrão para serviços DNS. O termo "inacessível" confirma que a solicitação para "www.yummyrecipesforme.com" não foi processada porque **nenhum serviço estava ativo/escutando** a porta receptora no servidor DNS.
+* **Repetição:** As linhas subsequentes no registro confirmam que o envio dos pacotes falhou mais duas vezes, retornando exatamente o mesmo erro ICMP.
 
 ---
 
-## Parte 2: Análise dos dados e causa do incidente
+## Tarefa e Próximos Passos
 
-- **Hora de ocorrência do incidente:** O primeiro pacote de dados capturado regista que o incidente começou às 13:24 (exatamente às 13:24:32.192571).
-- **Como a equipa de TI teve conhecimento do incidente:** Vários clientes reportaram dificuldades em aceder ao site da empresa (`www.yummyrecipesforme.com`), indicando que recebiam uma mensagem de erro de "porta de destino inalcançável" ("destination port unreachable") após aguardarem o carregamento da página.
-- **Ações tomadas pelo departamento de TI para investigar o incidente:** Um analista reproduziu o erro tentando aceder ao site. Em seguida, utilizou a ferramenta de análise de rede `tcpdump` para capturar e inspecionar os pacotes de rede enquanto tentava carregar a página web novamente, com o objetivo de identificar o ponto de falha na comunicação.
-- **Principais descobertas da investigação do departamento de TI:** - O navegador do utilizador (IP de origem `192.51.100.15`) enviou pacotes UDP contendo uma consulta DNS para o servidor DNS (IP de destino `203.0.113.2`).
-  - O servidor DNS de destino respondeu com pacotes ICMP contendo a mensagem de erro "udp port 53 unreachable".
-  - O log mostra que essa tentativa e o respetivo erro ocorreram pelo menos três vezes.
-  - O protocolo de rede afetado é o DNS.
-- **Causa provável do incidente:** O serviço DNS no servidor de destino (`203.0.113.2`) está inativo ou falhou (crash). Devido a isso, a porta 53 está fechada ou inacessível, impedindo o navegador de obter o endereço IP necessário para carregar o site via HTTPS. O incidente já foi encaminhado para os engenheiros de segurança para resolução.
+O objetivo desta etapa de análise foi inspecionar o tráfego para identificar o protocolo e o serviço afetados durante o incidente (neste caso, o **DNS via UDP na porta 53**). 
+
+**Status Atual do Incidente:** Enquanto a análise inicial está concluída e documentada neste relatório, a mitigação e resolução ativa do evento já foram assumidas pelos engenheiros de segurança, após o escalonamento do problema para o supervisor direto.
