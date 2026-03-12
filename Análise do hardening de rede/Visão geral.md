@@ -1,0 +1,7 @@
+Visão geral da atividade
+
+Nesta atividade, será apresentado um cenário sobre uma organização de mídia social que recentemente sofreu uma grande Violação de dados causada por vulnerabilidades não detectadas. Para lidar com a violação, você identificará algumas ferramentas comuns de hardening de rede que podem ser implementadas para proteger a segurança geral da organização. Em seguida, você selecionará uma vulnerabilidade específica da empresa e proporá diferentes métodos de hardening de rede. Por fim, você explicará como os métodos e as ferramentas escolhidos serão eficazes para o Gerenciamento da vulnerabilidade e como evitarão possíveis violações no futuro.
+
+No curso, você aprendeu sobre hardening de rede e práticas de hardening relacionadas à segurança de rede, como filtragem de portas, privilégios de acesso à rede e criptografia em redes. As práticas de hardening de rede ajudam as organizações a monitorar possíveis ameaças e ataques em sua rede e a evitar que alguns ataques ocorram. Algumas práticas de fortalecimento são implementadas todos os dias, enquanto outras são executadas de vez em quando, como a cada duas semanas ou uma vez por mês. A compreensão de como usar as ferramentas e os métodos de hardening de rede o ajudará a monitorar melhor a atividade da rede e a proteger a rede de sua organização contra vários ataques.
+
+Certifique-se de concluir essa atividade antes de prosseguir. O próximo item do curso lhe fornecerá um exemplo concluído para comparar com seu próprio trabalho. 
