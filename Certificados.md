@@ -4,7 +4,7 @@
 
 - [Jogue com Segurança: Gerencie Riscos de Segurança / Play It Safe: Manage Security Risks – Google (Coursera)](https://coursera.org/share/924bafbfd60f851e97293f1ff0641b80)
 
-- Conectar e Proteger: Redes e Segurança de Redes / Connect and Protect: Networks and Network Security – Google (Coursera)
+- [Conectar e Proteger: Redes e Segurança de Redes / Connect and Protect: Networks and Network Security – Google (Coursera)](https://coursera.org/share/4908a116609b7b74af7dfc33f1f85815)
 
 - Ferramentas do Ofício: Linux e SQL / Tools of the Trade: Linux and SQL – Google (Coursera)
 
